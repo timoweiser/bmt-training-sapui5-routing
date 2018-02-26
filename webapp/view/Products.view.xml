@@ -1,0 +1,49 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	controllerName="bmt.training.routing.controller.Products"
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m">
+	<Page title="Products">
+		<content>
+			<Table id="idProductsTable"
+				   inset="false"
+				   items="{
+						path: '/Products',
+						sorter: {
+							path: 'Name'
+						}
+					}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Products" level="H2"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="12em">
+						<Text text="Product" />
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Description" />
+					</Column>
+					<Column hAlign="End">
+						<Text text="Price" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem 
+						type="Navigation"
+						press="onPress">
+						<cells>
+							<ObjectIdentifier title="{Name}" text="{ID}"/>
+							<Text text="{Description}" />
+							<ObjectNumber
+									number="{path:'Price'}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

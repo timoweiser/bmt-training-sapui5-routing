@@ -1,0 +1,27 @@
+<mvc:View xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="bmt.training.routing.controller.ProductDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout">
+	<Page title="{Name}({ID})" navButtonPress="onNavBack" showNavButton="true">
+		<content>
+			<f:SimpleForm id="idSimpleForm">
+				<f:content>
+					<Label text="Name"/>
+					<Input valueLiveUpdate="true" value="{Name}"/>
+					<Label text="Beschreibung"/>
+					<Input valueLiveUpdate="true" value="{Description}"/>
+					<Label text="Preis"/>
+					<Input valueLiveUpdate="true" value="{Price}"/>
+					<Label text="Rating"/>
+					<Input valueLiveUpdate="true" value="{Rating}"/>
+					<Button text="Save" press="onSave"></Button>
+					<Button text="Cancel" press="onCancel"></Button>
+					<Button text="Create New" press="onPressCreateProduct"></Button>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+	</Page>
+</mvc:View>

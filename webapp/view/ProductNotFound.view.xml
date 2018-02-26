@@ -1,0 +1,17 @@
+<mvc:View
+	controllerName="bmt.training.routing.controller.ProductNotFound"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+
+	<MessagePage
+		title="Not Found"
+		text="Sorry! Product not Found :-( "
+		icon="{sap-icon://product}"
+		description=""
+		id="page">
+		<customDescription>
+			<Link id="link" text="Back?" press="onNavBack" />
+		</customDescription>
+	</MessagePage>
+
+</mvc:View>
