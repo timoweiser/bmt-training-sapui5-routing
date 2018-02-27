@@ -4,9 +4,15 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" 
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true"
-	xmlns="sap.m">
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
 	<Page title="Products">
 		<content>
+			<l:HorizontalLayout>
+				<Input id="idFilterInput"></Input>
+				<Button press="onPressFilter" icon="sap-icon://filter" tooltip="filter"></Button>
+			</l:HorizontalLayout>
+			
 			<Table id="idProductsTable"
 				   inset="false"
 				   items="{
