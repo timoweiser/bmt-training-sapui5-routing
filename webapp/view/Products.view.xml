@@ -4,7 +4,6 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" 
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true"
-<<<<<<< HEAD
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout">
 	<Page title="Products">
@@ -13,12 +12,6 @@
 				<Input id="idFilterInput"></Input>
 				<Button press="onPressFilter" icon="sap-icon://filter" tooltip="filter"></Button>
 			</l:HorizontalLayout>
-			
-=======
-	xmlns="sap.m">
-	<Page title="Products">
-		<content>
->>>>>>> branch 'master' of https://github.com/timoweiser/bmt-training-sapui5-routing.git
 			<Table id="idProductsTable"
 				   inset="false"
 				   items="{
