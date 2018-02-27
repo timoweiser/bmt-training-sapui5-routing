@@ -5,6 +5,7 @@ sap.ui.define([
 
 	return Controller.extend("bmt.training.routing.controller.Products", {
 
+<<<<<<< HEAD
 		_myTimeOut: null,
 
 		/**
@@ -35,6 +36,14 @@ sap.ui.define([
 			var oFilter = new sap.ui.model.Filter("Name", sap.ui.model.FilterOperator.Contains, sFilterValue);
 			var oBinding = this.getView().byId("idProductsTable").getBinding("items");
 			oBinding.filter(oFilter);
+=======
+		/**
+		 * Called when a controller is instantiated and its View controls (if available) are already created.
+		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
+		 * @memberOf bmt.training.routing.view.Products
+		 */
+		onInit: function() {
+>>>>>>> branch 'master' of https://github.com/timoweiser/bmt-training-sapui5-routing.git
 		},
 
 		/**
