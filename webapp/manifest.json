@@ -100,11 +100,7 @@
 				}
 			},
 			"routes": [{
-<<<<<<< HEAD
 				"pattern": ":?query:",
-=======
-				"pattern": "",
->>>>>>> branch 'master' of https://github.com/timoweiser/bmt-training-sapui5-routing.git
 				"name": "products",
 				"target": ["products"]
 			},{
