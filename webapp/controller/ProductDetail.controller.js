@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"bmt/training/routing/controller/BaseController"
+], function(BaseController) {
 	"use strict";
 
-	return Controller.extend("bmt.training.routing.controller.ProductDetail", {
+	return BaseController.extend("bmt.training.routing.controller.ProductDetail", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -11,13 +11,12 @@ sap.ui.define([
 		 * @memberOf bmt.training.routing.view.ProductDetail
 		 */
 		onInit: function() {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.getRoute("product").attachPatternMatched(this._onObjectMatched, this);
+			this.getRouter().getRoute("product").attachPatternMatched(this._onObjectMatched, this);
 		},
 		
 		_onObjectMatched: function (oEvent){
 			var sObjectId =  oEvent.getParameter("arguments").productId;
-			var sObjectPath = "/Products(" + sObjectId + ")";
+			var sObjectPath = "/Products/" + sObjectId;
 			this.getView().bindElement({
 				path: sObjectPath,
 				events: {
@@ -30,24 +29,14 @@ sap.ui.define([
 			var oView = this.getView(),
 				oElementBinding = oView.getElementBinding(),
 				oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				
+			var sObjectPath = oElementBinding.getBoundContext().getPath();
+			var oObject = this.getView().getModel().getProperty(sObjectPath);
 
 			// No data for the binding
-			if (!oElementBinding.getBoundContext()) {
+			if (!oObject) {
 				oRouter.getTargets().display("productNotFound");
 				return;
-			}
-		},
-		
-		onNavBack: function (oEvent){
-			var oHistory, sPreviousHash, oRouter;
-			oHistory = sap.ui.core.routing.History.getInstance();
-			sPreviousHash = oHistory.getPreviousHash();
-			
-			if(sPreviousHash !== undefined){
-				window.history.go(-1);
-			}else{
-				oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("products", true);
 			}
 		}
 

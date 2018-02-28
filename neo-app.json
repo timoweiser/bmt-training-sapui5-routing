@@ -26,6 +26,14 @@
         "name": "SAMPLE"
       },
       "description": "SAMPLE"
+    },
+    {
+      "path": "/Sample",
+      "target": {
+        "type": "destination",
+        "name": "Sample"
+      },
+      "description": "Sample"
     }
   ],
   "sendWelcomeFileRedirect": true

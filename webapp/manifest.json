@@ -12,16 +12,6 @@
 		"sourceTemplate": {
 			"id": "servicecatalog.connectivityComponent",
 			"version": "0.0.0"
-		},
-		"dataSources": {
-			"OData.svc": {
-				"uri": "/SAMPLE/V2/(S(xymmchsvxzo4qyetk2fca05p))/OData/OData.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/metadata.xml"
-				}
-			}
 		}
 	},
 	"sap.ui": {
@@ -39,7 +29,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_belize"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -68,22 +61,14 @@
 				"settings": {
 					"bundleName": "bmt.training.routing.i18n.i18n"
 				}
-			},
-			"": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
-				"settings": {
-					"defaultOperationMode": "Server",
-					"defaultBindingMode": "TwoWay",
-					"defaultCountMode": "None"
-				},
-				"dataSource": "OData.svc",
-				"preload": true
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -99,15 +84,22 @@
 					]
 				}
 			},
-			"routes": [{
-				"pattern": ":?query:",
-				"name": "products",
-				"target": ["products"]
-			},{
-				"pattern": "Products/{productId}",
-				"name": "product",
-				"target": ["product"]
-			}],
+			"routes": [
+				{
+					"pattern": ":?query:",
+					"name": "products",
+					"target": [
+						"products"
+					]
+				},
+				{
+					"pattern": "Products/{productId}",
+					"name": "product",
+					"target": [
+						"product"
+					]
+				}
+			],
 			"targets": {
 				"products": {
 					"viewName": "Products",
@@ -131,5 +123,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zproduct01/webapp",
+		"_version": "1.1.0"
 	}
 }

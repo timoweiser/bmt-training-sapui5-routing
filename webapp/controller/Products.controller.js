@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"bmt/training/routing/controller/BaseController"
+], function(BaseController) {
 	"use strict";
 
-	return Controller.extend("bmt.training.routing.controller.Products", {
+	return BaseController.extend("bmt.training.routing.controller.Products", {
 		_myTimeOut: null,
 
 		/**

@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Wed, 28 Feb 2018 07:36:38 GMT"
   },
   "generation": [
     {
@@ -27,7 +28,7 @@
     {
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
-      "dateTimeStamp": "Wed, 21 Feb 2018 16:11:12 GMT"
+      "dateTimeStamp": "Tue, 27 Feb 2018 19:58:10 GMT"
     }
   ],
   "translation": {
@@ -50,10 +51,14 @@
     "blockPushLevel": "Error"
   },
   "mockpreview": {
-    "mockUri": "/SAMPLE/V2/(S(xymmchsvxzo4qyetk2fca05p))/OData/OData.svc",
+    "mockUri": "/Sample/V2/(S(xmeotil43v2o5aqtetaukrpx))/OData/OData.svc",
     "metadataFilePath": "",
     "loadJSONFiles": false,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
+  },
+  "deploy": {
+    "destination": "FS1",
+    "name": "ZPRODUCT01"
   }
 }
